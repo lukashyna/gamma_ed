@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration Form:</title>
+    <style>
+        body {
+            background-color: #56B0D2;
+            color: #1e2428;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        article {
+            background-color: #ffffff;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        fieldset {
+            border-color: #2a93c9;
+            padding: 30px 15px 30px 15px;
+            margin-bottom: 30px;
+        }
+
+        fieldset>p {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+        }
+
+        legend {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            border: 1px solid #1e2428;
+            outline: none;
+            padding: 10px;
+        }
+
+        input:focus {
+            border: 1px solid #2a93c9;
+        }
+
+        input:not(:last-child),
+        select {
+            margin-bottom: 15px;
+        }
+
+        input[type="email"] {
+            margin: 0;
+        }
+
+        input[type="submit"] {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1.1em;
+            letter-spacing: 2px;
+            color: #2a93c9;
+            background-color: #ffffff;
+            border-style: solid;
+            border-width: 1px 1px 1px 1px;
+            border-color: #2a93c9;
+            padding: 15px 18.5px 15px 18.5px;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2a93c9;
+            color: #ffffff;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        span a {
+            color: #2a93c9;
+        }
+
+        span a:hover {
+            color: #1e2428;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h1>Conference Registration Form:</h1>
+        <form action="#" method="get" autocomplete="on">
+            <fieldset>
+                <legend>Conference Information:</legend>
+                <label for="name-confirence">Conference Name:*</label>
+                <select name="name-confirence" id="name-confirence">
+                    <option value="Biomedical Engineering">Biomedical Engineering</option>
+                    <option value="Development of Medical Sensors">Development of Medical Sensors</option>
+                    <option value="Innovations in Medical Diagnosis">Innovations in Medical Diagnosis</option>
+                </select> <label for="date">Date</label>
+                <input type="date" name="date" id="date" value="2024-01-01" readonly>
+                <label for="address">Address</label>
+                <input type="text" readonly value="Tallinn Tartu mnt. 18">
+            </fieldset>
+            <fieldset>
+                <legend>Participant's Personal Information:</legend>
+                <label for="user-name">Full Name* </label>
+                <input type="text" id="user-name" placeholder="Your name" required>
+                <label for="user-position">Position and Affiliation</label>
+                <input type="text" name="user-position" id="user-position" placeholder="Your position">
+                <label for="email">Contact Information:*</label>
+                <input type="email" name="email" id="email" placeholder="example@email.com" required>
+                <input type="tel" name="tel" id="tel" aria-label="Mobile phone" placeholder="123-45-67"
+                    pattern="[0-9]{3}[-][0-9]{2}[-][0-9]{2}" required>
+            </fieldset>
+            <fieldset>
+                <legend>Additional Information:</legend>
+                <p>Participation Format:</p>
+                <span>In-person</span><input type="radio" name="participation" id="in-person" value="in-person">
+                <span>Online</span><input type="radio" name="participation" id="online" value="online">
+                <label for="question">Any additional wishes or requirements:</label>
+                <textarea name="question" id="question" cols="30" rows="10" placeholder="Your message"></textarea>
+            </fieldset>
+            <p>Please fill in all required fields for successful registration at our scientific conference. We look
+                forward to your
+                participation and your scientific research!</p>
+            <input type="checkbox" name="news" id="news" required><span>Yes, I consent to my data being stored according
+                to the
+                guidelines set out in the <a href="#">Privacy Policy.</a></span>
+            <input type="submit" value="Submit">
+        </form>
+    </article>
+</body>
+
+</html>
