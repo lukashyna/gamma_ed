@@ -29,11 +29,12 @@ const people = [
   { name: "Mary", surname: "Roberts" },
 ];
 
+let string = "";
+
 for (let i = 0; i < people.length; i++) {
-  console.log(
-    ` <li><h1>Hello ${people[i].name} ${people[i].surname}</h1></li>`
-  );
+  string += `<li><h1>Hello ${people[i].name} ${people[i].surname}</h1></li>`;
 }
+console.log(`<ul>${string}</ul>`);
 
 // Напишите функцию которая будет принимать два аргумента (start, end)
 // Для каждого числа в диапозоне от start до end будет выводить число
@@ -56,21 +57,10 @@ evenOrOdd(-10, 25);
 
 function theBiggestNumber(a, b, c) {
   let number = 0;
-  //   if (a > number) {
-  //     number = a;
-  //   }
-  //   if (b > number) {
-  //     number = b;
-  //   }
-  //   if (c > number) {
-  //     number = c;
-  //   }
-  //   return number;
 
-  let arr = [a, b, c];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > number) {
-      number = arr[i];
+  for (let i = 0; i < arguments.length; i++) {
+    if (arguments[i] > number) {
+      number = arguments[i];
     }
   }
   return number;
